@@ -1,3 +1,4 @@
+import 'package:firebase_study/book_list_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -29,7 +30,10 @@ class MyApp extends StatelessWidget {
                   RaisedButton(
                     child: Text('ボタン'),
                     onPressed: () {
-                      model.changeKboyText();
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => BookList()),
+                      );
                     },
                   ),
                 ],
